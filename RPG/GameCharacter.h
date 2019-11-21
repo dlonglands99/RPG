@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 #include "Armour.h"
 #include "Weapon.h"
 
@@ -48,5 +49,6 @@ public:
 	void Walk();
 	void Run();
 	void Sleep();
+	bool isDead();
 };
 
