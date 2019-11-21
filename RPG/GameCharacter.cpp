@@ -72,9 +72,13 @@ void GameCharacter::AddFood(int amount) {
 
 void GameCharacter::Eat() {
 	if (food_ > 0) {
-		while (health_ < 1 && food_ > 0) {
-			food_--;
-			health_ += 0.25;
+		if (health_ == 1) {
+			std::cout << "You dont need to eat you are fully healed." << std::endl;
+		} else {
+			while (health_ < 1 && food_ > 0) {
+				food_--;
+				health_ += 0.25;
+			}
 		}
 	}
 }
